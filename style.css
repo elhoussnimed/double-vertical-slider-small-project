@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.info {
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease all;
+}
+
+.info div:has(h2[data-name="tablette"]) {
+    background-color: #CE8053;
+}
+
+.info div:has(h2[data-name="night-sky"]) {
+    background-color: #292943;
+}
+
+.info div:has(h2[data-name="forest"]) {
+    background-color: #56504C;
+}
+
+.info div:has(h2[data-name="flowers"]) {
+    background-color: #9D3019;
+}
+
+.info div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info div h2 {
+    font-size: 35px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.image {
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    transition: .5s ease all;
+}
+
+.image div {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 25%;
+    translate: 0 -50%;
+}
+
+.buttons button {
+    width: 50px;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid black;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    color: #bdbdbd;
+    transition: .4s all ease;
+}
+
+.buttons button:hover {
+    color: black;
+}
+
+.arrow-down {
+    left: -50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.arrow-up {
+    top: -55px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
